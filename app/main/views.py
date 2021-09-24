@@ -13,6 +13,8 @@ def index():
     """
     view root page function that returns index page
     """
+    title='Home-Welcome to EatSleepBlog'
+    return render_template('index.html', title=title)
 
 @main.route('/home')
 def home():
@@ -20,4 +22,4 @@ def home():
 
     title = 'Eat-Sleep_Blog'
     return render_template('home.html', title=title, blogQuote=blogQuote)
-    
+

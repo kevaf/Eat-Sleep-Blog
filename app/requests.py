@@ -1,5 +1,7 @@
 import requests
 
+
+
 def get_blogQuotes():
     """
     function to get json response to url requests
