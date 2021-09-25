@@ -159,7 +159,7 @@ def subscriber():
         db.session.add(subscriber)
         db.session.commit()
 
-        mail_message("Welcome to the Blogging Website","email/subscriber",subscriber.email,subscriber=subscriber)
+        mail_message("Welcome to the EatSleepBlog","email/subscriber",subscriber.email,subscriber=subscriber)
 
         title= "Eat-Sleep-Blog"
         return render_template('index.html',title=title, blog=blog, blogQuote=blogQuote)
