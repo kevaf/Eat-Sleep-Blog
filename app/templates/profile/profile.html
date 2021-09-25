@@ -1,10 +1,10 @@
 {% extends 'base.html'%} 
 {% block content %}
-<div class="container">
+<div class="container" style="margin-left: 30%;">
     <div class="row">
         <!-- displaying  Username-->
-        <div class="col-md-3" >
-            <h3 style="color: blue;"> {{user.username| capitalize}} </h3>
+        <div class="col-md-3" style="color: white;">
+            <h3> {{user.username| capitalize}} </h3>
 
             <!--Displaying user bio-->
             {% if user.bio %}
@@ -17,7 +17,7 @@
         </div>
 
         <!--Display profile photo-->
-        <div class="col-md-3">
+        <div class="col-md-3" style="margin-left: -10%;">
 
             {% if user.profile_pic_path %}
             <img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail" style="border-radius: 40%;"> {%else%}
@@ -35,7 +35,9 @@
 
 <style>
    
-    
+   body{
+       background-color: black;
+   } 
     
 </style>
 

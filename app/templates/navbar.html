@@ -1,4 +1,4 @@
-<div class="navbar navbar-inverse" role="navigation">
+<div class="navbar navbar-inverse" role="navigation" style="background-color: #101844; height: 70px;">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -7,19 +7,19 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/"> EatSleepCode </a>
+            <a class="navbar-brand" href="/" style="margin-top: 10px;"> <strong><span style="color: red;">Eat</span><span style="color: white;">Sleep</span><span style="color: green;">Code</span></strong></a>
         </div>
-        <div class="navbar-collapse collapse">
+        <div class="navbar-collapse collapse" style="margin-top: 10px;">
             <ul class="nav navbar-nav">
-                <li><a href="{{url_for( 'main.home')}} ">Home</a></li>
-                <li class="nav-item"><a href="{{url_for('main.theblog')}}" class="nav-link"><span>All Blogs</span></a></li>
-                <li><a href="{{url_for( 'main.blogs')}}" style="text-decoration: none; ">Write New Blog</a></li>
+                <li><a href="{{url_for( 'main.home')}} "><strong>Home</strong></a></li>
+                <li class="nav-item"><a href="{{url_for('main.theblog')}}" class="nav-link"><span><strong>All Blogs</strong></span></a></li>
+                <li><a href="{{url_for( 'main.blogs')}}" style="text-decoration: none; "><strong>Write New Blog</strong></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if current_user.is_authenticated %}
-                <li><a href="{{url_for( 'main.subscriber',uname=current_user.username)}} ">Subscribe</a></li>
-                <li><a href="{{url_for('main.profile',uname=current_user.username)}}">Account</a></li>
-                <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
+                <li><a href="{{url_for( 'main.subscriber',uname=current_user.username)}} "><strong>Subscribe</strong></a></li>
+                <li><a href="{{url_for('main.profile',uname=current_user.username)}}"><strong>Account</strong></a></li>
+                <li><a href="{{url_for('auth.logout')}}"><strong>Sign out</strong></a></li>
                 {% else %}
                 <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
                 {%endif%}

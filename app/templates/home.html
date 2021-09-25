@@ -1,19 +1,27 @@
 {% extends 'base.html' %} 
 {%block content%}
-<div class="container">
+<div class="container" style="margin-left: 20%; color: white;">
     <div class="col-md-8">
         <div>
             <h2 style="font-size: 80px; font-family: 'Lobster', cursive;  padding-top: 40px; text-align: center;">
-                Eat Sleep Blog</h2>
+                Random Quotes </h2>
             <br><br>
             <h5 style="text-align: center;">Refresh To Get Random Quotes</h5><hr>
 
             <p class="text-center">{{blogQuote.quote}}</p>
 
-            <p class="text-center"><b>~ {{blogQuote.author}} ~</b> </p>
+            <p class="text-center"><b>*** {{blogQuote.author}} ***</b> </p>
 
         </div>
     </div>
     <div class="col-md-2"></div>
 </div>
+
+<style>
+   
+    body{
+        background-color: black;
+    } 
+     
+ </style>
 {%endblock%}
