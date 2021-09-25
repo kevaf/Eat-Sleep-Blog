@@ -74,7 +74,7 @@ def blogs():
     if blog_form.validate_on_submit():
         title_blog= blog_form.title_blog.data
         description = blog_form.description.data
-        new_blog = Blog(title_blog=title_blog, description=description, user=current_user)
+        new_blog = Blog(title=title_blog, description=description, user=current_user)
         db.session.add(new_blog)
         db.session.commit()
         for subscriber in subscribers:
@@ -109,7 +109,7 @@ def update_blog(id):
 @login_required
 def theblog():
     blogs = Blog.query.all()
-    return render_template('myblogs.html', blogs=blogs)
+    return render_template('allblogs.html', blogs=blogs)
 
 
 @main.route('/view/<int:id>', methods=['GET', 'POST'])
