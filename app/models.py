@@ -1,10 +1,11 @@
 from operator import index
-
 from sqlalchemy.orm import query
 from . import db
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 from . import login_manager
+from datetime import datetime
+
 
 
 class User(UserMixin,db.Model):
@@ -47,6 +48,7 @@ class Blog(db.Model):
     title = db.Column(db.String(255), index=True)
     description =  db.Column(db.String(500), index=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id',ondelete='CASCADE'), nullable=False)
+    date = db.Column(db.DateTime, default=datetime.utcnow)
 
     def save_blog(self):
         db.session.add(self)
@@ -70,6 +72,7 @@ class Comment(db.Model):
     comment = db.Column(db.Text())
     blog_id = db.Column(db.Integer, db.ForeignKey('blogs.id',ondelete='CASCADE'))
     user_id = db.Column(db.Integer, db.ForeignKey('users.id',ondelete='CASCADE'))
+    date = db.Column(db.DateTime, default=datetime.utcnow)
 
     def save_comment(self):
         db.session.add(self)

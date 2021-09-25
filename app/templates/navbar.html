@@ -12,7 +12,8 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li><a href="{{url_for( 'main.home')}} ">Home</a></li>
-                <li><a href="" style="text-decoration: none; ">Share Pitch</a></li>
+                <li class="nav-item"><a href="{{url_for('main.theblog')}}" class="nav-link"><span>All Blogs</span></a></li>
+                <li><a href="{{url_for( 'main.blogs')}}" style="text-decoration: none; ">Write New Blog</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if current_user.is_authenticated %}
