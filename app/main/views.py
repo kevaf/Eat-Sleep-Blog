@@ -23,6 +23,15 @@ def home():
     title = 'Eat-Sleep_Blog'
     return render_template('home.html', title=title, blogQuote=blogQuote)
 
+@main.route('/user/<uname>')
+def profile(uname):
+    user = User.query.filter_by(username = uname).first()
+
+    if user is None:
+        abort(404)
+
+    return render_template("profile/profile.html", user = user)
+
 @main.route('/user/<uname>/update',methods = ['GET','POST'])
 @login_required
 def update_profile(uname):
@@ -74,7 +83,7 @@ def blogs():
         flash('New Blog Posted')
         return redirect(url_for('main.theblog'))
     title = 'New Blog'
-    return render_template('blogs.html', title=title, blog_form=blog_form)
+    return render_template('newblogs.html', title=title, blog_form=blog_form)
 
 @main.route('/Update/<int:id>', methods=['GET', 'POST'])
 @login_required
