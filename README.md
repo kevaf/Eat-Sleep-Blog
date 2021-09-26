@@ -7,3 +7,22 @@ This is a Ptython built web app that allows a user to create a blog post and hav
 
 ## Author & Contact Information.
 This web app was created by Kevin Kipyegon. If you have any suggestions or improvements you can reach the author via mail at kevin.kipyegon@student.moringaschool.com
+
+## Technologies Used
+1. Python
+2. Flask
+3. Heroku - Deployment
+4. HTML
+5. CSS/Bootstrap
+
+## Installation
+<li>Clone the Repository
+<ul> - git clone: https://github.com/kevaf/Eat-Sleep-Blog.git <br>
+- cd NewsCatchUp <br>
+- Open with desired code editor(Recommended VS Code) <br>
+- Install requirements <br>
+- Run: chmod a+x start.sh <br>
+- Run: ./start.py
+
+## Liscence.
+This is an open source project avaiable under the [MIT Liscence](LISCENCE).
