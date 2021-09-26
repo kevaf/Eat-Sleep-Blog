@@ -36,8 +36,8 @@ This web app was created by Kevin Kipyegon. If you have any suggestions or impro
 
 ## Screenshots
 ![Home](app/static/assets/home.png)
-![New](app/static/assets/hnew.png)
-![Comment](app/static/assets/hcomment.png)
+![New](app/static/assets/hsubscribe.png)
+![Comment](app/static/assets/hblogs.png)
 ![Random](app/static/assets/hrandom.png)
 
 ## Liscence.
