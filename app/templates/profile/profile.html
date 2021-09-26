@@ -1,6 +1,6 @@
 {% extends 'base.html'%} 
 {% block content %}
-<div class="container" style="margin-left: 30%;">
+<div class="container" style="padding-left: 30%;">
     <div class="row">
         <!-- displaying  Username-->
         <div class="col-md-3" style="color: white;">
@@ -12,7 +12,7 @@
             {%else%}
             <p> {{user.username| capitalize}} has no bio </p>
             {% endif %} {% if user == current_user %}
-            <a href="{{url_for('main.update_profile',uname=user.username)}}" style="color: black;">Edit Bio</a> {% endif %} <br>
+            <a href="{{url_for('main.update_profile',uname=user.username)}}" style="color: white; text-decoration: underline;">Edit Bio</a> {% endif %} <br>
            
         </div>
 
