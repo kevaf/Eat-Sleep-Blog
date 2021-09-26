@@ -24,5 +24,21 @@ This web app was created by Kevin Kipyegon. If you have any suggestions or impro
 - Run: chmod a+x start.sh <br>
 - Run: ./start.py
 
+## User Stories
+1. As a user, I would like to see the blogs other people have posted.
+2. As a user, I would like to vote on the blog they liked and give it a downvote or upvote.
+3. As a user, I would like to be signed in for me to leave a comment
+4. As a user, I would like to receive a welcoming email once I sign up.
+5. As a user, I would like to view the blogs I have created in my profile page.
+6. As a user, I would like to comment on the different pitches and leave feedback.
+7. As a user, I would like to submit a blog in any category.
+8. As a user, I would like to view the different categories.
+
+## Screenshots
+![Home](app/static/assets/home.png)
+![New](app/static/assets/hnew.png)
+![Comment](app/static/assets/hcomment.png)
+![Random](app/static/assets/hrandom.png)
+
 ## Liscence.
 This is an open source project avaiable under the [MIT Liscence](LISCENCE).
